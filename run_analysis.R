@@ -49,3 +49,5 @@ IDlabels <- c("Subject", "ActivityID", "ActivityLabel")
 DataLabels <- setdiff(colnames(MergedData), IDlabels)
 TempResult <- melt(MergedData, id = IDlabels, measure.vars = DataLabels)
 FinalResult <- dcast(TempResult, Subject + ActivityLabel ~ variable, mean)
+
+write.table(FinalResult, file = "TidyDataSet.txt", row.name=FALSE)
