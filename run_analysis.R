@@ -4,3 +4,16 @@
 ##Uses descriptive activity names to name the activities in the data set
 ##Appropriately labels the data set with descriptive variable names. 
 ##From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+##Load libraries
+library(data.table)
+library(reshape2)
+
+##Test data
+X_test <- read.table("test/X_test.txt")
+y_test <- read.table("test/y_test.txt")
+subject_test <- read.table("test/subject_test.txt")
+
+##Import feature names and activity labels
+features <- read.table("features.txt")[,2]
+activity_labels <- read.table("activity_labels.txt")[,2]
