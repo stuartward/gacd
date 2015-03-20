@@ -12,3 +12,8 @@ From the data set in step 4, creates a second, independent tidy data set with th
 # Repo Contents
 run_analysis.R - R script for the course project  
 CodeBook.md - description of variables, data, and transformations  
+
+# To Utilize the R Script
+Download the Samsung data and load it into your working directory  
+Download the run_analysis.R file and load into R  
+Run the script file; the last step in the file will generate a file named "TinyDataSet" in your working directory
